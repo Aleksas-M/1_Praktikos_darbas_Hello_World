@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         val tv = findViewById<TextView>(R.id.tvMessage)
         val btnSetText = findViewById<Button>(R.id.btnSetText)
         val btnChangeTextColor = findViewById<Button>(R.id.btnChangeTextColor)
+        val btnChangeBackground = findViewById<Button>(R.id.btnChangeBackground)
 
         btnSetText.setOnClickListener {
             tv.text = "Paspaudei mygtuką!"
@@ -24,5 +25,15 @@ class MainActivity : AppCompatActivity() {
             val isRed = tv.currentTextColor == Color.BLUE
             tv.setTextColor(if (isRed) Color.BLACK else Color.BLUE)
         }
+
+        btnChangeBackground.setOnClickListener {
+            val bg = (tv.background)
+            if (bg == null) {
+                tv.setBackgroundColor(Color.YELLOW)
+            } else {
+                tv.setBackgroundColor(Color.TRANSPARENT)
+            }
+        }
     }
 }
+
