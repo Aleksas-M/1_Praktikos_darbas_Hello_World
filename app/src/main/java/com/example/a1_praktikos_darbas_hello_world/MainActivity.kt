@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnChangeBackground.setOnClickListener {
-            //Comment for revert
             val bg = (tv.background)
             if (bg == null) {
                 tv.setBackgroundColor(Color.YELLOW)
